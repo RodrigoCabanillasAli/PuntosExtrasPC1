@@ -26,7 +26,7 @@ public class Ejercicio02 {
         System.out.println("Elija su opcion (1=SI/2=No)");
         int opcion= lector.nextInt();
         
-        double porcentaje,descuento;
+        double porcentaje,descuento = 0;
         
         if(promedio>=18 && promedio<=20){
             porcentaje=0.2;
@@ -40,11 +40,13 @@ public class Ejercicio02 {
             porcentaje=0.05;
             descuento=pensionbase*porcentaje;
         }
-        else
+        else{
             porcentaje=0;
-        descuento=pensionbase*porcentaje;
         
-        int bono=(opcion==1)? 50:0;
+        }
+            
+        
+        double bono=(opcion==1)? 50:0;
         
         double montofinal=pensionbase-descuento-bono;
         
